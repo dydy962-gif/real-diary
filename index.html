@@ -143,17 +143,34 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 @media(min-width:900px){
   body{display:flex;justify-content:center;background:var(--bg);}
   .app{max-width:100%;width:100%;min-height:100vh;box-shadow:none;}
-  .nav{max-width:100%;padding-left:40px;padding-right:40px;}
-  .page{padding:calc(80px + env(safe-area-inset-top)) 60px 60px;}
+  .nav{max-width:100%;padding-left:48px;padding-right:48px;}
+  .page{padding:calc(80px + env(safe-area-inset-top)) 80px 60px;}
   .cover-inner{max-width:600px;}
-  .cat-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));max-width:960px;margin:0 auto;}
+  .cat-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));max-width:1100px;margin:0 auto;}
   .mo-grid{grid-template-columns:repeat(4,1fr);}
   .yr-grid{grid-template-columns:repeat(5,1fr);}
   .bud-summary{grid-template-columns:repeat(4,1fr);}
-  .goal-list{max-width:800px;margin:0 auto;}
   .day-grid{grid-template-columns:repeat(7,1fr);}
-  .pg-hdr{max-width:960px;margin-left:auto;margin-right:auto;}
-  .daily-form,.memo-wrap,.achieve-wrap,.goals-wrap,.bud-wrap{max-width:800px;margin-left:auto;margin-right:auto;}
+  .pg-hdr{max-width:1100px;margin-left:auto;margin-right:auto;}
+  .daily-form,.memo-wrap,.achieve-wrap,.goals-wrap,.bud-wrap{max-width:860px;margin-left:auto;margin-right:auto;}
+}
+@media(max-width:500px){
+  .bud-summary{grid-template-columns:1fr 1fr;}
+  .goal-vals{grid-template-columns:1fr 1fr;}
+  .spl-grid{grid-template-columns:1fr;}
+  .yr-grid{grid-template-columns:repeat(3,1fr);}
+  .mo-grid{grid-template-columns:repeat(3,1fr);}
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .page{padding:calc(70px + env(safe-area-inset-top)) 16px 40px;}
+  .nav{padding-left:16px;padding-right:16px;}
+  .cover-yr{font-size:clamp(5rem,22vw,9rem);}
+  .cat-card{padding:20px 14px 16px;}
+}
+@media(min-width:501px) and (max-width:899px){
+  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .mo-grid{grid-template-columns:repeat(4,1fr);}
+  .yr-grid{grid-template-columns:repeat(4,1fr);}
+  .page{padding:calc(75px + env(safe-area-inset-top)) 24px 40px;}
 }
 .install-guide{background:var(--card2);border:1px dashed var(--gold);border-radius:14px;padding:16px;margin-top:14px;}
 .install-guide-title{font-size:12px;font-weight:700;color:var(--gold);margin-bottom:10px;}
@@ -467,25 +484,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
   padding:5px 14px;border-radius:8px;font-family:'Noto Sans KR',sans-serif;font-size:12px;font-weight:700;cursor:pointer;
 }
 
-@media(max-width:500px){
-  .bud-summary{grid-template-columns:1fr 1fr}
-  .goal-vals{grid-template-columns:1fr 1fr}
-  .spl-grid{grid-template-columns:1fr}
-  .yr-grid{grid-template-columns:repeat(3,1fr)}
-  .mo-grid{grid-template-columns:repeat(3,1fr)}
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .page{padding:calc(70px + env(safe-area-inset-top)) 16px 40px;}
-  .nav{padding-left:16px;padding-right:16px;}
-  .cover-yr{font-size:clamp(5rem,22vw,9rem);}
-  .cat-card{padding:20px 14px 16px;}
-  .pg-hdr{margin-bottom:14px;}
-}
-@media(min-width:501px) and (max-width:899px){
-  .cat-grid{grid-template-columns:repeat(3,1fr);}
-  .mo-grid{grid-template-columns:repeat(4,1fr);}
-  .yr-grid{grid-template-columns:repeat(4,1fr);}
-  .page{padding:calc(75px + env(safe-area-inset-top)) 24px 40px;}
-}
+.goal-vals{grid-template-columns:1fr 1fr}.spl-grid{grid-template-columns:1fr}.yr-grid{grid-template-columns:repeat(3,1fr)}.mo-grid{grid-template-columns:repeat(3,1fr)}.cat-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
